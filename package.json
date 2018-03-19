@@ -1,0 +1,11 @@
+{
+  "name": "event-loop",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:malimichael/pseudo-event-loop.git",
+  "author": "Mali Michael <malimccalla@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.16.3"
+  }
+}
