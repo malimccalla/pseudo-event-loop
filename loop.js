@@ -1,8 +1,8 @@
 // import myRootFile.js
 
 let pendingTimers = [];
-let pengingOSTasks = [];
-let pendingOpertations = [];
+let pengingOSTasks = []; // networking (see async.js)
+let pendingOpertations = []; // Thread pool (see threads.js)
 
 // new timers, tasks and operations are recorded from running the file
 myRootFile.run();

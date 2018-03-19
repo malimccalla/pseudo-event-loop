@@ -3,6 +3,9 @@
 
 // The thread pool allows for 4 threads to be ran simultaneously
 
+// We can manually update the default libuv threadpool size
+process.env.UV_THREADPOOL_SIZE = 2;
+
 const crypto = require('crypto');
 
 const start = Date.now();
@@ -23,7 +26,7 @@ crypto.pbkdf2('a', 'b', 100000, 512, 'sha512', () => {
   console.log('Thread 4:', Date.now() - start);
 });
 
-// Delay will occur
+// If kept at the default thread pool size of 4 a delay will occur
 crypto.pbkdf2('a', 'b', 100000, 512, 'sha512', () => {
   console.log('Thread 5:', Date.now() - start);
 });
